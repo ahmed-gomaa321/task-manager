@@ -1,0 +1,225 @@
+# Task Master
+
+## User Stories:
+
+1. As a new user, I want to **register** for an account so that I can start using the application.
+2. As a registered user, I want to **log in** to access my projects and tasks.
+3. As a user, I want to **create a new project** so that I can organize my tasks.
+4. As a project owner, I want to **invite team members** to my project so we can collaborate.
+5. As a team member, I want to **create tasks within a project** so that work can be tracked.
+6. As a user, I want to **assign tasks to team members** so that responsibilities are clear.
+7. As a user, I want to **update the status of my tasks** so that everyone knows the progress.
+8. As a team member, I want to **comment on tasks** to discuss details or provide updates.
+9. As a project manager, I want to **view project statistics** to track overall progress.
+10. As a user, I want to r**eceive notifications about task** assignments and deadlines.
+11. As a user, I want to **search for tasks across all my projects** to find specific information quickly.
+12. As a user, I want to **customize my profile and application settings** for a personalized experience.
+
+This means we have roles for the user → team member | project owner | project manager
+
+---
+
+## List of Pages (UI):
+
+1. Landing Page // done
+    - Brief introduction to TaskMaster
+    - Call-to-action buttons for Sign Up and Log In
+
+2. Registration Page // done
+    - Form for creating a new account
+3. Login Page // done
+    - Form for existing users to log in
+4. Dashboard
+    - Overview of user's projects // done
+    - Quick stats (tota l tasks, completed tasks, etc.) // done
+    - Recent activity feed // done
+5. Projects List Page // done
+    - List of all projects the user is involved in // done
+    - Option to create a new project // done
+6. Single Project View // done
+    - Project details and progress // done
+    - List of tasks within the project  // done
+    - Team members involved // done
+
+
+
+7. Task List Page  // done
+    - List of all tasks in a project // done 
+    - Filtering and sorting options // done 
+8. Task Detail Page // done
+    - Detailed view of a single task // done
+    - Comments section // done
+    - Option to edit task details // done
+9. Create/Edit Task Page //done
+    - Form for creating or editing a task //done
+10. Create/Edit Project Page // done
+    - Form for creating or editing a project // to do edit a project
+11. Team Members Page //done
+    - List of all team members in a project
+    - Option to invite new members
+
+
+
+
+    
+12. User Profile Page //done
+    - User's personal information
+    - Option to edit profile
+
+
+13. Settings Page
+    - Application preferences
+    - Notification settings
+    - Account management
+14. Calendar View
+    - Monthly/weekly view of tasks and deadlines
+
+    #######################
+15. Search Results Page
+    - Display results from global search
+16. Notifications Page
+    - List of all notifications
+    - Option to mark as read or delete
+
+    ########################
+17. Reports Page
+    - Various project and task statistics
+    - Performance metrics
+18. Help/FAQ Page // todo
+    - Guides on how to use the application
+    - Frequently asked questions
+
+    
+19. 404 Not Found Page //done
+    - Displayed when a page doesn't exist //done
+20. Error Page //done
+    - Displayed when an error occurs in the application //done
+
+---
+
+## Technical Tasks
+
+1. Set up a new project using `vite` with `react` and `typescript`
+2. Add Tailwind CSS to the project for styling
+3. Set up Redux Toolkit in the project
+    - Install necessary dependencies (`react-redux`, `@reduxjs/toolkit`)
+    - Create the Redux store
+    - Set up provider in the main App component
+4. Create a responsive layout that works well on desktop and mobile devices
+5. Set up `react-router-dom` for page navigation
+6. Make a header component with:
+    - Logo
+    - Navigation menu
+    - User profile picture and name (when logged in)
+    - Login/Logout button
+7. Create a footer component with:
+    - Copyright information
+    - Links to important pages (About, Contact, Terms of Service)
+8. Create Redux slices for user authentication
+    - Implement actions and reducers for login, logout, and registration
+9. Make a login page with:
+    - Email input
+    - Password input
+    - "Remember me" checkbox
+    - Login button
+    - Link to registration page
+    - Connect to Redux store for state management
+10. Create a registration page with:
+    - Name input
+    - Email input
+    - Password input
+    - Confirm password input
+    - Register button
+    - Connect to Redux store for state management
+11. Use `react-hook-form` with `yup` for all forms in the application
+12. Add form validation for login and registration forms
+13. Create a Redux slice for user profile data
+14. Create a user profile page where users can:
+    - See their information
+    - Edit their name, email, and profile picture
+    - Change their password
+    - Connect to Redux store for state management
+15. Create a Redux slice for projects data
+16. Make a **dashboard page** that shows:
+    - Number of projects
+    - Number of tasks (total, completed, in progress)
+    - Recent activity
+    - Connect to Redux store for data
+17. Create a projects list page that displays:
+    - All projects the user is part of
+    - Each project's name, description, and progress
+    - Use Redux for state management
+18. Make a create new project form with:
+    - Project name input
+    - Project description input
+    - Start date picker
+    - End date picker
+    - Add team members feature
+    - Dispatch actions to Redux store on form submission
+19. Create a Redux slice for tasks data
+20. Create a single project view page that shows:
+    - Project details (name, description, dates)
+    - List of team members
+    - Task list
+    - Project progress
+    - Connect to Redux store for data
+21. Make a task list component that:
+    - Shows all tasks for a project
+    - Allows sorting by different criteria (date, priority, status)
+    - Supports filtering tasks by status or assigned user
+    - Use Redux for state management
+22. Create a task detail view that displays:
+    - Task name
+    - Description
+    - Due date
+    - Priority
+    - Status
+    - Assigned user
+    - Connect to Redux store for data
+23. Make a create new task form with:
+    - Task name input
+    - Description input
+    - Due date picker
+    - Priority selector
+    - Assign to team member feature
+    - Dispatch actions to Redux store on form submission
+24. Add the ability to edit and delete tasks (update Redux store accordingly)
+25. Create a Redux slice for comments
+26. Create a comment system for tasks where users can:
+    - Add new comments
+    - View existing comments
+    - Edit or delete their own comments
+    - Use Redux for state management
+27. Implement Redux Toolkit's createAsyncThunk for handling asynchronous actions (API calls)
+28. Refactor API calls to use Redux Toolkit's RTK Query for efficient data fetching and caching
+29. Add error handling for all API requests and show user-friendly error messages (use Redux for global error state)
+30. Create loading spinners or skeleton screens to show while data is being fetched (use Redux for loading states)
+31. Add a search bar that allows users to search for tasks across all projects (implement search logic in Redux)
+32. Implement infinite scrolling or pagination for long lists (tasks, projects, comments) using Redux for state management
+33. Create a dark mode toggle that changes the color scheme of the entire application (store preference in Redux)
+34. Add confirmation dialogs for important actions (delete project, remove team member)
+35. Implement drag-and-drop interface for changing task status (e.g., "To Do" to "In Progress" to "Done"), updating Redux store on change
+36. Create a calendar view that shows task deadlines and project milestones (use Redux for data)
+37. Make a user activity feed that shows recent actions (created tasks, completed projects, etc.), pulling data from Redux store
+38. Add a notification system to alert users about:
+    - New task assignments
+    - Upcoming deadlines
+    - Mentions in comments
+    - Implement using Redux for state management
+39. Create charts or graphs to visualize:
+    - Task completion over time
+    - Project progress
+    - Team member workload
+    - Use data from Redux store
+40. Implement a team directory page showing all team members and their roles (use Redux for data management)
+41. Add the ability to invite new team members by email (update Redux store with new team members)
+42. Create a task dependencies feature, allowing tasks to be linked to each other (implement in Redux store)
+43. Implement file attachments for tasks, allowing users to upload and view files (store file metadata in Redux)
+44. Add a time tracking feature for tasks (integrate with Redux for state management)
+45. Create a settings page where users can:
+    - Change their notification preferences
+    - Update their time zone
+    - Manage their account
+    - Store preferences in Redux
+46. Create a reporting page with various project and task statistics (use Redux for data aggregation)
+47. Create a help/FAQ page with information on how to use the application

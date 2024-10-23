@@ -1,9 +1,8 @@
 import { FaHandPointDown } from 'react-icons/fa'
 import style from './LandingPage.module.css'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 import { ROUTES } from '@/app/constants/routes';
 export default function LandingPage() {
-  const navigate = useNavigate();
   return (
     <>
       <section className={`h-screen ${style.hero} bg-cover`} >

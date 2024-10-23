@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaTasks } from 'react-icons/fa';
 import { MdOutlinePendingActions } from "react-icons/md";
 import { RiTaskFill } from "react-icons/ri";
